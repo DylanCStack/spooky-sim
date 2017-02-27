@@ -8,6 +8,7 @@ this web app will...
     * above does not effect output
 
   ** Archetype List (the brain, the fool, the brawn, the beauty, the final girl)
+  ** Character Preparedness (very, sort of, not at all)
   ** Catalyst (item, proximity, time, third party, inevitability(cataclysm, fate, ect.))
   ** Threat Type (monster, multiple monster, force, phenom.(disease, asteroid, plants), person, psycho-supernatural (ghost, demonic, possession, ouiji))
   ** Story Type
@@ -20,3 +21,5 @@ this web app will...
   ** Length of time (hours, days, weekend, rest of life...)
   ** Spooky Sliding Scale (1 (minor spook) - 10 (the first ten minutes of saving private ryan with ghosts))
   * above determines statistics
+
+  at 4pm start wish list
