@@ -1,9 +1,5 @@
 <?php
 
-    /**
-     *
-     */
-
     class Archetype
     {
         private $name;
@@ -11,9 +7,10 @@
         private $brain;
         private $luck;
         private $empathy;
+        private $assets;
         private $id;
 
-        function __construct($name, $brawn, $brain, $luck, $empathy,  $id = null)
+        function __construct($name, $brawn, $brain, $luck, $empathy, $assets = 3, $id = null)
         {
             $this->name = $name;
             $this->brawn = $brawn;
@@ -48,14 +45,35 @@
             return $this->empathy = $empathy;
         }
 
+        function getAssets()
+        {
+            return $this->assets = $assets;
+        }
+
         function getId()
         {
             return $this->id = $id;
         }
 
+        function save()
+        {
+            $GLOBALS['DB']->exec("INSERT INTO archetype (name, brawn, brain, luck, empathy, assets) VALUES ('{$this->getName()}', {$this->getBrawn()}, {$this->getBrain()}, {$this->getLuck()}, {$this->getEmpathy()}, {$this->getAssets()});");
+            $this->id = $GLOBALS['DB']->lastInsertId();
+        }
+
+        function delete()
+        {
+            $GLOBALS['DB']->exec("DELETE FROM archetype WHERE id= {$this->getId()};");
+        }
+
         static function getAll()
         {
-            $GLOBALS['DB']->query("SELECT * FROM archetypes;"); 
+            $GLOBALS['DB']->query("SELECT * FROM archetype;");
+        }
+
+        static function deleteAll()
+        {
+            $GLOBALS['DB']->exec('DELETE FROM archetype');
         }
     }
 
