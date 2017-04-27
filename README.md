@@ -1,3 +1,10 @@
+# Description
+This project is a draft for a potential horror narrative template/generator.
+
+
+
+
+
 this web app will...
 
 * Take horror scenario and enter it into a table.
